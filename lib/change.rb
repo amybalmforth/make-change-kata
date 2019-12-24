@@ -10,7 +10,10 @@ class Change
     if num == 5
       return {:N=>1}
     end
-    return {:D=>1}
+    if num == 10
+      return {:D=>1}
+    end
+    return {:Q=>1}
   end
 
 end
