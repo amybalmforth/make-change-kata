@@ -15,5 +15,8 @@ class Change
     if num == 100
       return {:H=>2}
     end
+    if num == 6
+      return {:N=>1, :P=>1}
+    end
   end
 end
