@@ -6,17 +6,14 @@ class Change
     if num == 1 || num == 5 || num == 10 || num == 25 || num == 50
       return { coins[num] => 1 }
     end
-    if num == 2
-      return {:P=>2}
+    newnum = num / 2
+    if coins.key?(newnum)
+      return { coins[newnum] => 2}
     end
-    if num == 20
-      return {:D=>2}
-    end
-    if num == 100
-      return {:H=>2}
-    end
+
     if num == 6
       return {:N=>1, :P=>1}
     end
   end
+
 end
