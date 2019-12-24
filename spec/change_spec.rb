@@ -38,5 +38,9 @@ describe Change do
     it 'take in 20, return {:D=>2}' do
       expect(subject.make_change(20)).to eq ({ D: 2 })
     end
+
+    it 'take in 100, return {:H=>2}' do
+      expect(subject.make_change(100)).to eq ({ H: 2 })
+    end
   end
 end

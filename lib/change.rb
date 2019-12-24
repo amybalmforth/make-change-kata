@@ -12,5 +12,8 @@ class Change
     if num == 20
       return {:D=>2}
     end
+    if num == 100
+      return {:H=>2}
+    end
   end
 end
