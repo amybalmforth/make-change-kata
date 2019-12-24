@@ -15,6 +15,10 @@ describe Change do
     it "take in 1, return {:P=>1}" do
       expect(subject.make_change(1)).to eq ({:P=>1})
     end
+
+    it "take in 5, return {:N=>1}" do
+      expect(subject.make_change(5)).to eq ({:N=>1})
+    end
   end
 
 

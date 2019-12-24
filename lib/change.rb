@@ -4,7 +4,10 @@ class Change
     if num == 0
       return {}
     end
-    return {:P=>1}
+    if num == 1
+      return {:P=>1}
+    end
+    return {:N=>1}
   end
 
 end
