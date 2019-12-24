@@ -1,12 +1,6 @@
 require "change"
 describe Change do
 
-  # 1 -> {:P=>1}
-  # 5 -> {:N=>1}
-  # 10 -> {:D=>1}
-  # 25 -> {:Q=>1}
-  # 50 -> {:H=>1}
-
   describe "zero or 1 coin" do
     it "take in zero, return empty hash" do
       expect(subject.make_change(0)).to eq ({})
@@ -33,5 +27,14 @@ describe Change do
     end
   end
 
+  # 2 -> {:P=>2}
+  # 20 -> {:D=>2}
+  # 100 -> {:H=>2}
+
+  describe "two coins but 1 hash pair" do
+    it "take in 2 output {:P=>2}" do
+      expect(subject.make_change(2)).to eq ({:P=>2})
+    end
+  end
 
 end
