@@ -1,7 +1,12 @@
 class Change
-  def make_change(num)
-    coins = { 1 => :P, 5 => :N, 10 => :D, 25 => :Q, 50 => :H }
 
+  attr_reader :coins
+
+  def initialize
+    @coins = { 1 => :P, 5 => :N, 10 => :D, 25 => :Q, 50 => :H }
+  end
+
+  def make_change(num)
     return {} if num == 0
     if num == 1 || num == 5 || num == 10 || num == 25 || num == 50
       return { coins[num] => 1 }
