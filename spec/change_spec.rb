@@ -39,14 +39,15 @@ describe Change do
       expect(subject.make_change(100)).to eq ({ H: 2 })
     end
   end
-
-  # 6 -> {:N=>1, :P=>1}
   # 7 -> {:N=>1, :P=>2}
 
   describe '2 hash pairs' do
-
     it 'take in 6, return {:N=>1, :P=>1}' do
       expect(subject.make_change(6)).to eq ({:N=>1, :P=>1})
+    end
+
+    it 'take in 7, return {:N=>1, :P=>2}' do
+      expect(subject.make_change(7)).to eq ({:N=>1, :P=>2})
     end
   end
 

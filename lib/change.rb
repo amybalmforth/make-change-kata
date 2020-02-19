@@ -14,6 +14,9 @@ class Change
     if num == 6
       return {:N=>1, :P=>1}
     end
+    if num == 7
+      return {:N=>1, :P=>2}
+    end
   end
 
 end
